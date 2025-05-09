@@ -16,7 +16,7 @@ struct LessonDetailView: View {
         ScrollView {
             VStack(spacing: 24) {
                 
-                // Title & Mentor (centered)
+               
                 VStack(spacing: 8) {
                     Text(lesson.lessonTitle)
                         .font(.largeTitle)
@@ -30,13 +30,13 @@ struct LessonDetailView: View {
                 }
                 .padding(.top)
 
-                // Video player
+
                 VideoPlayer(player: AVPlayer(url: URL(string: lesson.videoURL)!))
                     .frame(height: 220)
                     .cornerRadius(12)
                     .shadow(radius: 4)
 
-                // Lesson Notes
+
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Lesson Notes")
                         .font(.title)
@@ -46,7 +46,7 @@ struct LessonDetailView: View {
                         .foregroundColor(.black)
                 }
 
-                // Submit Button
+
                 Button(action: {
                     showSubmitModal.toggle()
                 }) {
