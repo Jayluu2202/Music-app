@@ -50,7 +50,7 @@ struct LessonCardView: View {
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            // Background image with gradient overlay
+
             AsyncImage(url: URL(string: lesson.videoThumbnailURL)) { phase in
                 if let image = phase.image {
                     image
@@ -67,7 +67,7 @@ struct LessonCardView: View {
             .frame(maxWidth: .infinity)
             .clipped()
 
-            // Gradient overlay for better text contrast
+
             LinearGradient(
                 gradient: Gradient(colors: [Color.black.opacity(0.8), Color.black.opacity(0.2)]),
                 startPoint: .bottom,
@@ -77,7 +77,7 @@ struct LessonCardView: View {
             .frame(maxWidth: .infinity)
             .clipped()
 
-            // Text content on top of gradient
+
             VStack(alignment: .leading, spacing: 4) {
                 Text(lesson.lessonTitle)
                     .font(.headline)
